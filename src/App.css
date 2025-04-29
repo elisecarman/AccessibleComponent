@@ -18,6 +18,73 @@ img, picture, video, canvas, svg{
 /* flex box froggy to learn layout!! */
 /* ------------------------------------ */
 
+@font-face {
+  font-family: 'Boone';
+  src: url('assets/fonts/BOONE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PeachyFantasy';
+  src: url('assets/fonts/PeachyFantasy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regano';
+  src: url('assets/fonts/Regano.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bronzion';
+  src: url('assets/fonts/BronzionBlackPersonalUseRegular-E44zl.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title{
+  font-family: 'Bronzion';
+  font-size: 3rem;
+}
+
+.home{
+  font-family: 'Bronzion';
+  background-color: #000000;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-family: 'Boone';
+}
+
+h2{
+  font-family: 'Boone';
+}
+
+h3{
+  font-family: 'Boone';
+}
+
+h4{
+  font-family: 'Boone';
+}
+
+h5{
+  font-family: 'Boone';
+}
+
 :root {
   --base-bg: #f2f2f2;
   --base-text: #000000;
@@ -43,6 +110,8 @@ img, picture, video, canvas, svg{
 .container{
   background-color: var(--base-bg);
   color: var(--base-text);
+  overflow-x: hidden;
+
   /* margin: 0;
   padding: 0; */
 }
@@ -54,6 +123,8 @@ img, picture, video, canvas, svg{
   align-items: center;
   background-color: var(--base-bg);
   color: var(--base-text);
+  overflow-x: hidden;
+  position: relative;
 }
 
 .top{
@@ -81,8 +152,8 @@ img, picture, video, canvas, svg{
 
 .section-navigation{
   position: fixed;
-  top: 50%;
-  left: 1rem;
+  top: 60px;
+  left: 2rem;
   z-index: 1000;
   margin: 0rem;
   width: 150px
@@ -103,10 +174,28 @@ img, picture, video, canvas, svg{
 .section{
   overflow: hidden;
   /* min-height: 100vh; */
-  background: var(--base-bg);
+  /* background: var(--base-bg); */
+  z-index: 1000;
   color: var(--base-text);
   padding-top: 3rem;
   padding-left: 13rem;
+  /* padding-left: 4rem; */
+  padding-right: 4rem;
+  margin-bottom: 10rem;
+  max-width: 1500px;
+  width: auto;
+}
+
+.section-first{
+  overflow: hidden;
+  min-height: 100vh;
+  background: var(--base-bg);
+  z-index: 1000;
+
+  color: var(--base-text);
+  padding-top: 3rem;
+  padding-left: 13rem;
+  /* padding-left: 4rem; */
   padding-right: 4rem;
   margin-bottom: 10rem;
   max-width: 1500px;
@@ -160,6 +249,18 @@ img, picture, video, canvas, svg{
     max-width: 1500px;
     width: auto;
   }
+
+  .section-first{
+    overflow: hidden;
+    background: var(--base-bg);
+    color: var(--base-text);
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1500px;
+    width: auto;
+    min-height: 100vh;
+  }
   
   .section-navigation{
     position: fixed;
@@ -174,10 +275,6 @@ img, picture, video, canvas, svg{
 
   @media (max-width: 500px){
     .section-navigation{
-      display: none;
-    }
-
-    table{
       display: none;
     }
   }
