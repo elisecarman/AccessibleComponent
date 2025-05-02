@@ -12,6 +12,7 @@ import spotify_a from "../assets/accessible-component/spotify-abled.png"
 import spotify_d from "../assets/accessible-component/spotify-disabled.png"
 import shellshock_a from "../assets/accessible-component/shellshock-abled.png"
 import shellshock_d from "../assets/accessible-component/shellshock-disabled.png"
+import swordguy from "../assets/portfolio/sword-guy.png"
 import { Row, Col, Dropdown, DropdownButton, Image, Table, Card} from 'react-bootstrap'
 import Section from "../components/Section";
 import Callout from "../components/Callout";
@@ -58,17 +59,18 @@ function AccessibleComponent() {
         <Row>
         <Col>
         <h1 className="title">Accessible Components</h1>
-        <h1 className="mb-5">Is your Dropdown Menu up to par?</h1>
+        <h3 className="mb-5">Is your Dropdown Menu up to par?</h3>
         <Row className="justify-content-start mb-5">
-          <Col>
-            <h3 className="mb-5">Oh look. A dropdown menu. Simple right?</h3>
-          </Col>
+          
           <Col>
           <DropdownButton variant="dark" data-bs-theme="dark" title="Click Me" className="mb-5">
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </DropdownButton>
+          </Col>
+          <Col>
+            <h3 className="mb-5">Oh look. A dropdown menu. Simple right?</h3>
           </Col>
         </Row>
         <Row style={{zIndex: 100}}>
@@ -126,8 +128,8 @@ function AccessibleComponent() {
           Many applications choose different implementations for their dropdown menus. Let's compare a few together, and come up with our own improvements!
         </Callout>
         </Col>
-        <Col>
-        <img style={{position: "absolute", width: "600px"}} src="src/assets/portfolio/sword-guy.PNG"></img>
+        <Col xs={0} lg={6}>
+        <Image style={{position: "absolute", width: "600px"}} src={swordguy}></Image>
         </Col>
         </Row>
       </Section>
